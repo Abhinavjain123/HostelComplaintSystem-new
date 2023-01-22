@@ -29,19 +29,6 @@ var transporter = nodemailer.createTransport({
     }
 });
 
-//curr date
-var datetime = new Date();
-//Email-send
-var nodemailer = require('nodemailer');
-var transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth:{
-        user: 'miniprojectgithub@gmail.com',
-        // pass: 'Hostel@2022'
-        pass: 'xlkzajttkepkrfjn'
-    }
-});
-
 //
 app.get("/",function(req,res){
     client.query(`call auto_esc()`,(err,res2)=>{
@@ -654,11 +641,6 @@ app.post("/view_my_complaints", function(req,res){
             }
         })
     }
-})
-
-app.post("/send_mail",function(req,res){
-    let c_id = req.body.submit;
-    client.query(`select * from complaints where `)
 })
 
 app.post("/send_mail",function(req,res){
