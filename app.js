@@ -271,6 +271,7 @@ app.post('/',function(req,res){
             // console.log(res2);
             if(err) console.log(err.message);
             else if (res2.rowCount == 0){
+            
                 console.log("Student not registered");
                 res.send("<h1>Student not registered</h1>");
             }
